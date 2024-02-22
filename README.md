@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/andersonfelixds/spring_boot_angular/blob/main/logo.png" width="30%">
+  <img src="https://github.com/andersonfelixds/spring_boot_angular/logo.png" width="30%">
   <h1 style="border-bottom:none">Spring Boot e Angular</h1>
   <p>Developer: Anderson Felix</p>
   
