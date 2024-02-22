@@ -1,0 +1,63 @@
+<div class="container mt-3">
+    <div class="row">
+      <div class="col-12 col-lg-12 col-md-12 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+            <form class="p-1">
+                <div class="mb-3">
+                    <img class="img-thumbnail w-25 p-3" src="assets/andersonfelix.webp">
+                    <h3>Cadastro de clientes</h3>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text"   placeholder="Nome"   class="form-control" name="name"   [(ngModel)]="cliente.name">                  
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Idade</label>
+                    <input type="number" placeholder="Idade"  class="form-control" name="age"  [(ngModel)]="cliente.age">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="city" class="form-label">Cidade</label>
+                    <input type="text"   placeholder="Cidade" class="form-control" name="city" [(ngModel)]="cliente.city">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="state" class="form-label">Estado</label>
+                  <input type="text"   placeholder="Estado" class="form-control" name="state" [(ngModel)]="cliente.state">
+                </div>
+
+                <input type="button" value="Cadastrar"  *ngIf="btnCadastro"   class="btn btn-primary"   (click)="cadastrar()">
+                <input type="button" value="Alterar"    *ngIf="!btnCadastro"  class="btn btn-warning"   (click)="editar()">
+                <input type="button" value="Remover"    *ngIf="!btnCadastro"  class="btn btn-danger"    (click)="remover()">
+                <input type="button" value="Cancelar"   *ngIf="!btnCadastro"  class="btn btn-secondary" (click)="cancelar()">
+            </form>
+        </div>
+        
+        
+    </div>
+    <div class="row">
+                <table class=" col-6 col-lg-12 col-md-12 table table-striped" *ngIf="tabela">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Cidade</th>
+                            <th>Estado</th>
+                            <th>Selecionar</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody>
+                        <tr *ngFor="let c of clientes; index as i">
+                            <td>{{i+1}}</td>
+                            <td>{{c.name}}</td>
+                            <td>{{c.age}}</td>
+                            <td>{{c.city}}</td>
+                            <td>{{c.state}}</td>
+                            <td><button class="btn btn-success" (click)="selecionarCliente(i)">Selecionar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+</div>

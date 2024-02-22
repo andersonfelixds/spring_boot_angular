@@ -1,0 +1,22 @@
+form {
+    background-color: #fff;
+}
+img{
+   width: 250px; 
+   margin-bottom: 30px;
+   border-radius: 6px;
+}
+
+input{
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border:1px solid #e3e3e3; 
+}
+
+input[type="button"]{
+    margin-right: 10px;
+}
+table {
+    border: 1px solid #fff;
+    background-color: #e3e3e3;
+}
